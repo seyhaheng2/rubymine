@@ -1,0 +1,61 @@
+// Place all the styles related to the site controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.top-bar{
+
+}
+.row{
+	max-width: 100%;
+}
+#tweeter{
+	background-color: #edff63;
+	padding: 20px;
+	margin: 0;
+	
+}
+.good{
+	padding: 0px;
+	h1{
+		padding-bottom: -20px;
+	}
+	img{
+		&:hover{
+		-webkit-animation:spinning 3s alternate ease-in;
+		}
+	}
+}
+.form-location{
+	margin-top: 80px;
+}
+#head{
+	background: #bef105;
+}
+.tmargin{
+	margin-top: 20px;
+	color:#fff;
+	font-weight: bold;
+	font-family: Advent Pro;
+}
+.bmargin{
+	margin-bottom: -30px;
+}
+
+.smargin{
+	margin-top: 20px;
+	
+}
+.smargin-top{
+	margin-bottom: 20px;
+}
+.secondary{
+	opacity: 0.7;
+}
+
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
