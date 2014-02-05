@@ -15,12 +15,28 @@
 }
 .good{
 	padding: 0px;
-	h1{
-		padding-bottom: -20px;
-	}
 	img{
+		animation-name: spinning; 
+		animation-duration: 4s;
+		animation-play-state: paused;
+		animation-iteration-count:10;
+		-moz-animation-name: spinning; 
+		-moz-animation-duration: 4s;
+		-moz-animation-play-state: paused;
+		-moz-animation-iteration-count:10;
+		-o-animation-name: spinning; 
+		-o-animation-duration: 4s;
+		-o-animation-play-state: paused;
+		-o-animation-iteration-count:10;
+		-webkit-animation-name: spinning; 
+		-webkit-animation-duration: 4s;
+		-webkit-animation-play-state: paused;
+		-webkit-animation-iteration-count:10;
 		&:hover{
-		-webkit-animation:spinning 3s alternate ease-in;
+		animation-play-state: running;
+		-o-animation-play-state: running;
+		-moz-animation-play-state: running;
+		-webkit-animation-play-state: running;
 		}
 	}
 }
@@ -28,23 +44,36 @@
 	margin-top: 80px;
 }
 #head{
-	background: #bef105;
+	background: #BE0035;
+}
+#about{
+	background-color: #BE0035;
+	color:#fff;
 }
 .tmargin{
-	margin-top: 20px;
+	margin-top: 0px;
 	color:#fff;
 	font-weight: bold;
 	font-family: Advent Pro;
 }
 .bmargin{
-	margin-bottom: -30px;
+	margin-bottom: -10px;
 }
 
-.smargin{
-	margin-top: 20px;
+.mmargin{
+	margin-top: 40px;
+	font-weight: bold;
 	
 }
-.smargin-top{
+.mmargin-top{
+	margin-bottom: 40px;
+}
+.nmargin{
+	margin-top: 20px;
+	font-weight: bold;
+	
+}
+.nmargin-top{
 	margin-bottom: 20px;
 }
 .secondary{
@@ -52,10 +81,159 @@
 }
 
 @keyframes spinning {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+@-webkit-keyframes spinning {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+@-moz-keyframes spinning {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+.slim{
+	font-weight: 200;
+}
+.pos-rel{
+	position: relative;
+}
+.down-triangle{
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 30px 35px 0 35px;
+	border-color: #ffffff transparent transparent transparent;
+	position: absolute;
+	bottom:-20px;
+	left: 45%;
+
+}
+
+.large-12{
+	h2{
+	color:black;
+	}
+}
+.large-3{
+	img{
+		width:100px;
+		-webkit-filter: grayscale(100%);
+	    -o-filter: grayscale(100%);
+	    -moz-filter: grayscale(100%);
+		filter: grayscale(100%);
+		// opacity: 0.7;
+		// filter: gray;
+		// -webkit-filter: grayscale(100%);
+		&:hover{
+			-webkit-filter: grayscale(0%);
+	    	-o-filter: grayscale(0%);
+		    -moz-filter: grayscale(0%);
+			filter: grayscale(0%);
+		}
+	}
+	h3{
+		color:#fff;
+		font-family: Advent Pro;
+	}
+}
+.slim-title{
+	font-size: 23px;
+	color: #FFF;
+}
+
+
+
+.trans{
+	-webkit-transition: all 0.3 cubic-bezier(0,.91,43,.98);
+	   -moz-transition: all 0.3 cubic-bezier(0,.91,43,.98);
+	    -ms-transition: all 0.3 cubic-bezier(0,.91,43,.98);
+	     -o-transition: all 0.3 cubic-bezier(0,.91,43,.98);
+	        transition: all 0.3 cubic-bezier(0,.91,43,.98);
+}
+
+.team-single{
+	opacity: 0.7;
+	position: relative;
+	&:hover{
+		top:-10px;
+		opacity: 0.9;
+		-webkit-animation: 1s;
+		-o-animation: 1s;
+		animation: 1s;
+	}
+}
+.large-12{
+	p{
+		img{
+		height: 300px;
+		border-radius: 10000px;
+		border: 10px solid #970017;
+		}	
+	}
+}
+
+.team-hover{
+	img{
+		-webkit-filter: grayscale(90%);
+	    -o-filter: grayscale(90%);
+	    -moz-filter: grayscale(90%);
+		filter: grayscale(90%);
+		// opacity: 0.7;
+		// filter: gray;
+		// -webkit-filter: grayscale(100%);
+		&:hover{
+			-webkit-filter: grayscale(0%);
+	    	-o-filter: grayscale(0%);
+		    -moz-filter: grayscale(0%);
+			filter: grayscale(0%);
+		}
+	}
+	&:hover{
+		margin-top:-10px;
+	}
+}
+h2{
+	color:#fff;
+	.tertiry{
+		color:#515151;
+	}
+}
+#contact{
+	background-color: #1c1c1c;
+	color:#fff;
+}
+input, textarea {
+	line-height: 50px;
+	height: 50px !important;
+	border-radius: 7px;
+	padding:15px !important;
+	border: none !important;
+}
+textarea{
+	min-height: 200px !important;
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+    border-radius: 7px;
+
+    font-family: inherit;
+    border: 1px solid rgb(204, 204, 204);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) inset;
+    color: rgba(0, 0, 0, 0.75);
+    display: block;
+    font-size: 0.875rem;
+    margin: 0px 0px 1rem;
+    padding: 0.5rem;
+    height: 2.3125rem;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    transition: box-shadow 0.45s ease 0s, border-color 0.45s ease-in-out 0s;
+}
+.control-foot{
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.welcome-tiangle{
+	margin-top: 20px;
 }
