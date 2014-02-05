@@ -6,7 +6,7 @@ gem 'foundation-rails'
 gem 'devise'
 gem 'carrierwave'
 gem 'better_errors'
-
+gem 'from-reaksmey' 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
